@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+📊 FinPort - Excel to Tally JSON Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  
+  
+  
+  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  A powerful, browser-based tool to convert Excel files to Tally-compatible JSON format for seamless data import.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  Features •
+  Demo •
+  Installation •
+  Usage •
+  Column Mapping •
+  JSON Structure •
+  Contributing
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎯 Overview
+FinPort is a lightweight, client-side web application that transforms Excel spreadsheets into Tally-compatible JSON format. With Tally's new JSON import functionality, this tool bridges the gap between your Excel data and Tally accounting software, eliminating manual data entry and reducing errors.
+Why FinPort?
+·	⚡ No Server Required - Runs entirely in your browser
+·	🔒 Privacy First - Your data never leaves your computer
+·	🎨 Modern UI - Clean, professional desktop-like interface
+·	📱 Cross-Platform - Works on Windows, Mac, and Linux
+·	💰 100% Free - Open source and free forever
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✨ Features
+Core Features
+Feature	Description
+📤 Excel Upload	Support for .xlsx, .xls, and .csv files
+🔗 Smart Column Mapping	Auto-detects and maps columns to Tally fields
+👁️ Live Preview	View your data in a paginated table before conversion
+🔄 JSON Conversion	Converts to exact Tally JSON specification
+📥 Download JSON	Export ready-to-import JSON file
+📋 Copy to Clipboard	Quick copy JSON for direct paste
+📄 Template Download	Get a pre-formatted Excel template
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Voucher Support
+·	✅ Sales
+·	✅ Sales Busy
+·	✅ Purchase
+·	✅ Purchase Busy
+·	✅ Receipt
+·	✅ Payment
+·	✅ Journal
+·	✅ Contra
+·	✅ Credit Note
+·	✅ Debit Note
+UI Features
+·	🎯 Full-screen desktop application feel
+·	📊 Paginated data table (25/50/100/200/500 rows)
+·	🔍 Dynamic column headers from Excel
+·	⚙️ Configurable voucher settings
+·	📈 File statistics (rows, columns, size)
+·	🔔 Toast notifications for actions
+·	📌 Status bar with real-time updates
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
